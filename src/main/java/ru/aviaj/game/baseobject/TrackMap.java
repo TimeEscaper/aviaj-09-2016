@@ -1,4 +1,4 @@
-package ru.aviaj.game.object;
+package ru.aviaj.game.baseobject;
 
 import java.util.ArrayList;
 import java.util.List;

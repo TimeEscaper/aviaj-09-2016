@@ -1,4 +1,4 @@
-package ru.aviaj.game.object;
+package ru.aviaj.game.baseobject;
 
 import ru.aviaj.game.basetype.Dot;
 import ru.aviaj.game.basetype.Vector;
