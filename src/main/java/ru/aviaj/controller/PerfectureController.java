@@ -67,23 +67,15 @@ public class PerfectureController {
         return ResponseEntity.ok(new PlaceListResponse(placeList));
     }
 
-    private class PlaceIdRequest {
-        private long id;
-
-        public PlaceIdRequest() { }
-
-        public PlaceIdRequest(long id) {
-            this.id = id;
-        }
-
-        public long getId() { return id; }
-    }
-
     private class PlaceListResponse {
         private List<Place> places = new ArrayList<>();
 
         public PlaceListResponse(List<Place> places) {
             this.places = places;
+        }
+
+        public List<Place> getPlaces() {
+            return places;
         }
     }
 }
