@@ -44,6 +44,7 @@ public class PerfectureController {
 
             return ResponseEntity.ok(place);
         } catch (DbException e) {
+            e.printStackTrace();
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(
                     new ErrorList(ErrorType.DBERROR)
             );
@@ -57,6 +58,7 @@ public class PerfectureController {
         try {
             placeList = placeService.getNearestPlaces(longitude, latitude);
         } catch (DbException e) {
+            e.printStackTrace();
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(
                     new ErrorList(ErrorType.DBERROR)
             );
