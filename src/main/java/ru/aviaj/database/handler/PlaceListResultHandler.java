@@ -15,7 +15,7 @@ public class PlaceListResultHandler implements IResultHandler<List<Place>> {
         while (resultSet.next()) {
             bufferPlaceList.add(new Place(resultSet.getLong("id"),
                     resultSet.getString("title"),
-                    resultSet.getString("description"),
+                    null,
                     resultSet.getDouble("longitude"),
                     resultSet.getDouble("latitude")));
         }
